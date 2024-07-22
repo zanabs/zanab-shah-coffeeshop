@@ -1,0 +1,320 @@
+
+@use './partials/global' as *;
+
+
+
+/* introductory section on the homepage/landing page; nitro title, description of coffee and picture of coffee bags */
+
+.intro {
+   padding-bottom: 3%;
+   @include primary-background();
+   @include row-spacebetween();
+   gap: 12rem;
+  } 
+
+  .intro__text {
+    width: 22%; 
+    @include margin-auto_padding-zero();
+    vertical-align: top;  
+    color: $secondary-color;
+        h1 {
+            margin-bottom: 0%;
+        }
+        p {
+            margin-bottom: 9%;
+        }
+  }
+
+  .intro__image {
+    width: 40%;
+    text-align: center;
+  }
+
+    .intro__image img {
+        height: 100%;
+        margin-top: 4%;
+        width: 100%;
+        max-width: 21vw;
+  }
+
+/* product section: products title, product cards w product and button */ 
+
+.our-products {
+    @include column-center();
+    background-color: $tertiary-color;
+    padding-top: 4%;
+    margin: 0%;
+
+}
+
+
+.our-products__product-cards {
+   @include row-center();
+    background-color: $tertiary-color;
+    color: $secondary-color;
+    width: 100%;
+    margin-top: 0%;
+}
+
+
+.product-cards__image-with-description {
+    @include product-card-style();
+    @include column-center();
+    margin: 2.2rem;
+
+    img {
+
+        height: 17.5rem;
+        @include secondary-background();
+        padding: 2.5rem;
+    
+    }
+    
+    
+
+}
+
+
+.product-cards__footer {
+
+    @include row-align_center-justify_spacearound();
+    @include product-card-footer-style();
+
+}
+
+.product-cards__footer .price {
+    color:$feature-color;
+}
+
+/* "View all" button */
+
+.our-products__button {
+    margin-bottom: 3%;
+}
+
+/* prices */ 
+
+.price {
+    font-size: 2.06rem;
+    font-weight: 400;
+    color: $feature-color;
+    text-align: center;
+    margin: 0%;
+}
+
+/* buttons */
+
+button {
+    a {
+        color: inherit;
+    }
+}
+
+
+.button-border {
+
+    @include button-border-style();
+    
+}
+
+.button-background {
+    @include button-background-style();
+    
+}
+
+.button-border:active {
+
+    transform: translate(0.35rem, 0.35rem);
+
+}
+
+
+.profile {
+    margin-top: 5%;
+    @include secondary-background();
+    @include row-align_center-justify_spacearound();
+    color: $secondary-color;
+}
+
+.profile__item-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    width: 28%;
+
+}
+
+.profile__item-1 button {
+    width:auto;
+}
+
+.profile__small-images {
+    @include row-spacebetween();
+    margin-bottom: 7%;
+}
+
+.profile__small-images img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.profile__item-2 {
+    @include column-align_center-justify_center();
+    background-image: url(../assets/images/coldbrewbackground.png);
+    background-size: cover;
+    width: 30%;
+}
+
+.profile__item-2:hover {
+    img {
+    animation: can-rotate 2s infinite linear;
+    }
+}
+
+
+
+.profile__item-2-background {
+    @include column-align_center-justify_center();
+    position: absolute;
+    z-index: 0;
+}
+
+
+.profile__can-image-outline {
+    background: none;
+    margin: auto;
+    padding: 15%;
+    border-width: 0.4rem;
+    border-style: solid;
+    border-color: $feature-color;
+    width: 68%;
+    @include column-center();
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+    z-index: 1;
+
+    img {
+        margin: auto;
+        background: none;
+    }
+
+}
+
+
+/* discount section */
+
+.discount-section {
+    
+    @include secondary-background();
+   @include column-center();
+    padding: 12% 0% 12% 0%;
+}
+.discount-text{
+   
+    @include secondary-background();
+    font-size: 2.81rem;
+    color: white;
+    width: 80%;
+    padding: 1% 0% 1% 0%;
+    animation: background-color-change 2.5s infinite;
+    
+
+    p {
+        margin: 2% 1% 2% 1%;
+      
+    }
+}
+
+
+.discount {
+    font-weight: 400;
+}
+
+.discount-code {
+    font-weight: 700;
+}
+
+/* footer */
+
+.footer-container {
+   @include primary-background();
+    position: relative;
+    padding-bottom: 3%;
+    overflow: hidden;
+   
+
+    
+    footer {
+        color:$secondary-color;
+        @include primary-background();
+        @include row-spaceevenly();
+    }
+    footer div {
+        margin:auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        @include primary-background();
+    
+    }
+
+    footer p {
+        padding: 0%;
+        margin: 0%;
+        width: 100%;
+        font-size: 1.3rem;
+        color: $secondary-color;
+
+    } 
+
+}
+
+
+
+.footer-container__image-1, .footer-container__image-2 {
+
+position: absolute;
+opacity: 30%;
+
+    img {
+        width: 10.4vw;
+    }
+}
+
+.footer-container__image-1 {
+
+    left:-3rem;
+    top: 1rem;
+}
+
+.footer-container__image-2 {
+
+    right:-3rem;
+    bottom:1rem;
+}
+
+
+
+/* social media info, hours and address */
+
+.footer__address {
+    margin-left: 15%;
+
+}
+
+.footer__hours {
+    margin-left: 6%; 
+
+}
+
+.footer__social {
+    margin-left: 5%;
+}
+
+.footer__address .footer__hours .footer__social {
+    position: absolute;
+    img {
+        size: 50px;
+    }
+}

@@ -1,0 +1,255 @@
+/* colors */ 
+
+$primary-color: #fff0ed;
+$secondary-color: #393939;
+$tertiary-color: #f7f7f7;
+$quarternary-color: #909090;
+$feature-color: #5bacc3;
+$secondary-background: white;
+
+/* commonly used background styles */ 
+
+@mixin primary-background {
+    background-color: $primary-color;
+}
+
+@mixin secondary-background {
+    background-color: $secondary-background;
+}
+
+@mixin tertiary-background {
+  background-color: $tertiary-color;
+}
+
+@mixin no-background {
+    background-color: none;
+}
+
+/* button styling */
+
+@mixin button-border-style {
+    border-color: $secondary-color;
+    border: 0.1rem;
+    border-style: solid;
+    background-color: none;
+    width: 11rem;
+    padding:0.8rem 0.6rem 0.8rem 0.6rem;
+    z-index: 1;
+    @include column-center();
+    position: absolute;
+
+    button {
+        color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: inherit;
+    border: none;
+    margin: auto;
+    }
+}
+
+@mixin button-background-style {
+    background-color: $feature-color;
+    border: 0em;
+    width: 11.25rem;
+    height: 2.3rem;
+    padding: 0.6rem;
+    z-index: 0;
+    position: relative;
+    bottom: -0.35rem;
+    right: -0.35rem;
+}
+
+
+
+
+/* product card styling */
+
+$product-card__radius: 0.625rem;
+$product-card__shadow: 0rem 0.3rem 0.56rem -0.06rem rgba(0, 0, 0, 0.25);
+
+@mixin product-card-style {
+    box-sizing: border-box;
+    border-radius: $product-card__radius;
+    box-shadow: $product-card__shadow;
+    @include secondary-background();
+    width: 22.9vw
+}
+
+@mixin product-card-footer-style {
+    width: 22.9vw;
+    @include primary-background();
+    padding: 2% 0% 6% 0%;
+    margin-top:4%;
+    border-bottom-left-radius:inherit;
+    border-bottom-right-radius:inherit;
+
+    h3 {
+        margin-bottom: 0%;
+    }
+    p {
+        margin-top: 0%;
+        color: $quarternary-color;
+        font-weight: bold;
+    }
+}
+
+
+/*animations:*/
+
+@keyframes background-color-change {
+    0% {background-color: $secondary-color;}
+    50% {background-color: $feature-color;}
+    100% {background-color: $secondary-color;}
+    
+}
+
+@keyframes can-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* flexbox dimensions */ 
+
+@mixin row-spacebetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin row-spacearound {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@mixin row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin row-align_center-justify_spacearound {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin row-spaceevenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+@mixin column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin column-align_center-justify_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* padding & margin */
+
+@mixin margin-auto_padding-zero {
+    margin:auto;
+    padding:0%;
+}
+
+
+/* icon details */
+.iconography {
+  width: 3.13rem;
+  display: inline-block;
+}
+
+/* main body content */
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin: 0em;
+}
+
+/* navigation bar */
+header {
+  @include primary-background();
+  @include row-spacebetween();
+  width: 100%;
+}
+
+
+#nav-header {
+  font-weight: 300;
+  text-align: left;
+  display: inline-block;
+  color: $secondary-color;
+  margin-bottom: 0%;
+}
+#nav-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  display: inline-block;
+}
+nav li {
+  list-style-type: none;
+  font-size: 1.31rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: 1.25em;
+  color: $secondary-color;
+}
+nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shop-now-link {
+  color: $feature-color;
+}
+
+/* headings */
+h1, h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  margin-top: 0%;
+}
+
+h3 {
+  font-size: 2.06rem;
+  font-weight: 300;
+}
+
+/* formatting if needed*/
+.centered {
+  text-align: center;
+}
+
+.aligned-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+
+}/*# sourceMappingURL=global.css.map */

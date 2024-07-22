@@ -1,0 +1,440 @@
+/* colors */
+/* commonly used background styles */
+/* button styling */
+/* product card styling */
+/*animations:*/
+@keyframes background-color-change {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5bacc3;
+  }
+  100% {
+    background-color: #393939;
+  }
+}
+@keyframes can-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* flexbox dimensions */
+/* padding & margin */
+/* icon details */
+.iconography {
+  width: 3.13rem;
+  display: inline-block;
+}
+
+/* main body content */
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin: 0em;
+}
+
+/* navigation bar */
+header {
+  background-color: #fff0ed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#nav-header {
+  font-weight: 300;
+  text-align: left;
+  display: inline-block;
+  color: #393939;
+  margin-bottom: 0%;
+}
+
+#nav-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  display: inline-block;
+}
+
+nav li {
+  list-style-type: none;
+  font-size: 1.31rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: 1.25em;
+  color: #393939;
+}
+
+nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shop-now-link {
+  color: #5bacc3;
+}
+
+/* headings */
+h1, h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  margin-top: 0%;
+}
+
+h3 {
+  font-size: 2.06rem;
+  font-weight: 300;
+}
+
+/* formatting if needed*/
+.centered {
+  text-align: center;
+}
+
+.aligned-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+} 
+/* introductory section on the homepage/landing page; nitro title, description of coffee and picture of coffee bags */
+.intro {
+  padding-bottom: 3%;
+  background-color: #fff0ed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12rem;
+}
+
+.intro__text {
+  width: 22%;
+  margin: auto;
+  padding: 0%;
+  vertical-align: top;
+  color: #393939;
+}
+.intro__text h1 {
+  margin-bottom: 0%;
+}
+.intro__text p {
+  margin-bottom: 9%;
+}
+
+.intro__image {
+  width: 40%;
+  text-align: center;
+}
+
+.intro__image img {
+  height: 100%;
+  margin-top: 4%;
+  width: 100%;
+  max-width: 21vw;
+}
+
+/* product section: products title, product cards w product and button */
+.our-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding-top: 4%;
+  margin: 0%;
+}
+
+.our-products__product-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f7f7f7;
+  color: #393939;
+  width: 100%;
+  margin-top: 0%;
+}
+
+.product-cards__image-with-description {
+  box-sizing: border-box;
+  border-radius: 0.625rem;
+  box-shadow: 0rem 0.3rem 0.56rem -0.06rem rgba(0, 0, 0, 0.25);
+  background-color: white;
+  width: 22.9vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.2rem;
+}
+.product-cards__image-with-description img {
+  height: 17.5rem;
+  background-color: white;
+  padding: 2.5rem;
+}
+
+.product-cards__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 22.9vw;
+  background-color: #fff0ed;
+  padding: 2% 0% 6% 0%;
+  margin-top: 4%;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+.product-cards__footer h3 {
+  margin-bottom: 0%;
+}
+.product-cards__footer p {
+  margin-top: 0%;
+  color: #909090;
+  font-weight: bold;
+}
+
+.product-cards__footer .price {
+  color: #5bacc3;
+}
+
+/* "View all" button */
+.our-products__button {
+  margin-bottom: 3%;
+}
+
+/* prices */
+.price {
+  font-size: 2.06rem;
+  font-weight: 400;
+  color: #5bacc3;
+  text-align: center;
+  margin: 0%;
+}
+
+/* buttons */
+button a {
+  color: inherit;
+}
+
+.button-border {
+  border-color: #393939;
+  border: 0.1rem;
+  border-style: solid;
+  background-color: none;
+  width: 11rem;
+  padding: 0.8rem 0.6rem 0.8rem 0.6rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+.button-border button {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: inherit;
+  border: none;
+  margin: auto;
+}
+
+.button-background {
+  background-color: #5bacc3;
+  border: 0em;
+  width: 11.25rem;
+  height: 2.3rem;
+  padding: 0.6rem;
+  z-index: 0;
+  position: relative;
+  bottom: -0.35rem;
+  right: -0.35rem;
+}
+
+.button-border:active {
+  transform: translate(0.35rem, 0.35rem);
+}
+
+.profile {
+  margin-top: 5%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #393939;
+}
+
+.profile__item-1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+  width: 28%;
+}
+
+.profile__item-1 button {
+  width: auto;
+}
+
+.profile__small-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 7%;
+}
+
+.profile__small-images img {
+  width: 50px;
+  height: 50px;
+}
+
+.profile__item-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/images/coldbrewbackground.png);
+  background-size: cover;
+  width: 30%;
+}
+
+.profile__item-2:hover img {
+  animation: can-rotate 2s infinite linear;
+}
+
+.profile__item-2-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.profile__can-image-outline {
+  background: none;
+  margin: auto;
+  padding: 15%;
+  border-width: 0.4rem;
+  border-style: solid;
+  border-color: #5bacc3;
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -1rem;
+  left: -1rem;
+  z-index: 1;
+}
+.profile__can-image-outline img {
+  margin: auto;
+  background: none;
+}
+
+/* discount section */
+.discount-section {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12% 0% 12% 0%;
+}
+
+.discount-text {
+  background-color: white;
+  font-size: 2.81rem;
+  color: white;
+  width: 80%;
+  padding: 1% 0% 1% 0%;
+  animation: background-color-change 2.5s infinite;
+}
+.discount-text p {
+  margin: 2% 1% 2% 1%;
+}
+
+.discount {
+  font-weight: 400;
+}
+
+.discount-code {
+  font-weight: 700;
+}
+
+/* footer */
+.footer-container {
+  background-color: #fff0ed;
+  position: relative;
+  padding-bottom: 3%;
+  overflow: hidden;
+}
+.footer-container footer {
+  color: #393939;
+  background-color: #fff0ed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-container footer div {
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #fff0ed;
+}
+.footer-container footer p {
+  padding: 0%;
+  margin: 0%;
+  width: 100%;
+  font-size: 1.3rem;
+  color: #393939;
+}
+
+.footer-container__image-1, .footer-container__image-2 {
+  position: absolute;
+  opacity: 30%;
+}
+.footer-container__image-1 img, .footer-container__image-2 img {
+  width: 10.4vw;
+}
+
+.footer-container__image-1 {
+  left: -3rem;
+  top: 1rem;
+}
+
+.footer-container__image-2 {
+  right: -3rem;
+  bottom: 1rem;
+}
+
+/* social media info, hours and address */
+.footer__address {
+  margin-left: 15%;
+}
+
+.footer__hours {
+  margin-left: 6%;
+}
+
+.footer__social {
+  margin-left: 5%;
+}
+
+.footer__address .footer__hours .footer__social {
+  position: absolute;
+}
+.footer__address .footer__hours .footer__social img {
+  size: 50px;
+}/*# sourceMappingURL=landing.css.map */
